@@ -19,17 +19,17 @@ jobs:
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:
-        python-version: '3.8'
+        python-version: '3.6'
 
     - name: Build using AppService-Build
       uses: azure/appservice-build@v2
       with:
         platform: python
-        platform-version: '3.8'
+        platform-version: '3.6'
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'lcemobileservicesproduction'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_aa66e60c77344bb3bb485d7d2a2235b6 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_18bc074db6d24b8ea889bd2ce54731e0 }}
